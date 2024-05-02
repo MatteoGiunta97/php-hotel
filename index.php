@@ -64,14 +64,29 @@ Se non viene specificato nessun filtro, visualizzare come in precedenza tutti gl
 <body>
     <h1>Hotels:</h1>
 
-    <ul class="list-group list-group-horizontal">
+    <ul class="list-group">
         <?php foreach($hotels as $hotel) { ?>
-            <li class="list-group-item">
-                <div>Nome:<?php echo $hotel['name']; ?></div>
-                <div>Descrizione:<?php echo $hotel['description']; ?></div>
-                <div>Parcheggio:<?php echo $hotel['parking'] ?></div>
-                <div>Voto:<?php echo $hotel['vote'] ?></div>
-                <div>Distanza dal centro:<?php echo $hotel['distance_to_center'] ?></div>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold">Nome: </div>
+                        <?php echo $hotel['name']; ?>
+                </div>
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold">Descrizione: </div>
+                        <?php echo $hotel['description']; ?>
+                </div>
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold">Parcheggio: </div>
+                        <?php echo $hotel['parking']; ?>
+                </div>
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold">Voto: </div>
+                        <?php echo $hotel['vote']; ?>
+                </div>
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold">Distanza dal centro: </div>
+                        <?php echo $hotel['distance_to_center']; ?>
+                </div>
             </li>
         <?php } ?>
     </ul>
