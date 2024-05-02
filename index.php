@@ -61,13 +61,17 @@ Se non viene specificato nessun filtro, visualizzare come in precedenza tutti gl
     <title>Hotels</title>
 </head>
 <body>
+    <h1>Hotels:</h1>
+    
     <ul>
         <?php foreach($hotels as $hotel) { ?>
-            <li><?php echo $hotel['name'] ?></li>
-            <li><?php echo $hotel['description'] ?></li>
-            <li><?php echo $hotel['parking'] ?></li>
-            <li><?php echo $hotel['vote'] ?></li>
-            <li><?php echo $hotel['distance_to_center'] ?></li>
+            <li>
+                <div>Nome:<?php echo $hotel['name']; ?></div>
+                <div>Descrizione:<?php echo $hotel['description']; ?></div>
+                <div>Parcheggio:<?php echo $hotel['parking'] ?></div>
+                <div>Voto:<?php echo $hotel['vote'] ?></div>
+                <div>Distanza dal centro:<?php echo $hotel['distance_to_center'] ?></div>
+            </li>
         <?php } ?>
     </ul>
 </body>
